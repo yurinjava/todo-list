@@ -18,7 +18,7 @@
 		<script>
 			function editar(id, descricao){
 				let form = document.createElement('form');
-				form.action="#";
+				form.action='tarefa_controller.php?acao=atualizar';
 				form.method="post";
 				form.className="row";
 
@@ -36,7 +36,7 @@
 				inputId.name ='id';
 				inputId.value=id;
 
-				let button = document.createElement('submit');
+				let button = document.createElement('button');
 				button.type="submit";
 				button.className="col-3 btn btn-info";
 				button.innerHTML ="Atualizar";
