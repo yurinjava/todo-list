@@ -55,6 +55,10 @@
 				//console.log(descricao)
 				tarefa.insertBefore(form, tarefa[0])
 			}
+			
+			function remover(id){
+				location.href= 'todas_tarefas.php?acao=remover&id='+id
+			}
 		</script>
 	
 	</head>
@@ -95,8 +99,8 @@
 											</div>
 											
 										<div class="col-sm-3 mt-2 d-flex justify-content-between">
-											<i class="fas fa-trash-alt fa-lg text-danger"></i>
-											<i class="fas fa-edit fa-lg text-info" style="cursor:pointer; "onclick="editar(<?= $tarefa->id; ?>, '<?= $tarefa->tarefa ?> (<?= $tarefa->status ?>)')"></i>
+											<i class="fas fa-trash-alt fa-lg text-danger" style="cursor:pointer;" onclick="remover(<?= $tarefa->id ?>)"></i>
+											<i class="fas fa-edit fa-lg text-info" style="cursor:pointer; " onclick="editar(<?= $tarefa->id; ?>, '<?= $tarefa->tarefa ?> (<?= $tarefa->status ?>)')"></i>
 											<i class="fas fa-check-square fa-lg text-success"></i>
 										</div>
 									</div>
